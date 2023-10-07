@@ -27,7 +27,7 @@ exports.Signup = async (req, res) => {
       console.log(data)
       res.send("email already exist")
     } else {
-      const user = await addDoc(collectionName('Cookin'), { name, email, password })
+       await addDoc(collectionName('Cookin'), { name, email, password })
       const userData = await search({
         collectionName: "Cookin",
         qattribute: 'email',
