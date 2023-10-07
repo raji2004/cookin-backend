@@ -23,7 +23,7 @@ exports.Signup = async (req, res) => {
       qtype: '==',
       qvalue: email
     })
-    if (data.length===0) {
+    if (data.length != 0) {
       console.log(data)
       res.send("email already exist")
     } else {
